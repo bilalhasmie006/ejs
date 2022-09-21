@@ -7,6 +7,16 @@
     <title>Document</title>
 </head>
 <body>
+<% if(html_day==="friday"){ %>
     <h1>the day you born was <%= html_day%>  </h1>
+
+    <h2 style="color: green;">this day the great bilal hashmie was born</h2>
+
+<%}
+else{%>
+    <h1>the day you born was <%= html_day%>  </h1>
+    <%
+}
+%>
 </body>
 </html>
