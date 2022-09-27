@@ -18,5 +18,21 @@ else{%>
     <%
 }
 %>
+<ul>
+<li>Buy Food</li>
+<li>Cook Food</li>
+<li>Eat Food</li>
+<% for (var i=0;i<html_items.length;i++){%>   
+    <!--jub bi html_items update ho gae to saari array ki values dobaara liki jain gi -->
+<li><%=html_items[i]%></li>
+<%}%>
+
+<form action="/" method="post">
+<input type="text" name="newItem" value="">
+<button type="submit" name="button" >Submit</button>
+
+</form>
+
+</ul>
 </body>
 </html>
