@@ -4,35 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Document</title>
 </head>
 <body>
-<% if(html_day==="friday"){ %>
-    <h1>the day you born was <%= html_day%>  </h1>
 
-    <h2 style="color: green;">this day the great bilal hashmie was born</h2>
+<div class="box" id="heading">
+<h1> <%=html_day %> </h1>
+</div>
 
-<%}
-else{%>
-    <h1>the day you born was <%= html_day%>  </h1>
-    <%
-}
-%>
-<ul>
-<li>Buy Food</li>
-<li>Cook Food</li>
-<li>Eat Food</li>
-<% for (var i=0;i<html_items.length;i++){%>   
-    <!--jub bi html_items update ho gae to saari array ki values dobaara liki jain gi -->
-<li><%=html_items[i]%></li>
-<%}%>
+<div class="box">
+    <% for (let i=0;i<html_items.length;i++){%>   
+        <!--check let vs var!!!.jub bi html_items update ho gae to saari array ki values dobaara liki jain gi -->
+    <div class="item">
+        <input type="checkbox">
+        <p><%=html_items[i]%></p>
 
-<form action="/" method="post">
-<input type="text" name="newItem" value="">
-<button type="submit" name="button" >Submit</button>
+    </div>
+    <%}%>
+    <form action="/" method="post">
+        <input type="text" name="newItem" value="" placeholder="New Item" autocomplete="off">
+        <button type="submit" name="button" >+</button>
+        
+    </form> 
 
-</form>
 
-</ul>
+</div>
+
+
 </body>
 </html>
